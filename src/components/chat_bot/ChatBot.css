@@ -13,6 +13,8 @@
 	font-size: 3.5rem;
 	font-weight: bold;
 	text-align: left;
+	margin-bottom: 1rem;
+	display: block;
 }
 
 .chat-bot__wrapper {

@@ -1,3 +1,36 @@
 .chat-messages {
 	flex: 1;
+	overflow: scroll;
+}
+
+.chat-messages__list {
+	display: flex;
+	flex-direction: column-reverse;
+	min-height: 100%;
+	box-sizing: border-box;
+}
+
+.message {
+	display: flex;
+	padding-bottom: 2rem;
+}
+
+.message__avatar {
+	display: flex;
+}
+
+.message__text {
+	min-width: 200px;
+	box-sizing: border-box;
+	padding: 0 2rem;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	background: #f9c35b;
+	border-radius: 35px;
+	margin-left: 2rem;
+}
+.message__text > p {
+	margin: 0;
+	word-wrap: break-word;
 }
