@@ -1,14 +1,23 @@
 import React from 'react';
 import './ChatMessages.css';
-import Avatar from '../../img/avatar_1.svg';
+import AvatarUser from '../../img/avatar_user.svg';
+import AvatarBot from '../../img/avatar_bot.svg';
 function ChatMessages(props) {
 	const list = props.messageList.map(item => {
 		return (
 			<div className="message" key={item.id}>
 				<div className="message__avatar">
-					<img src={Avatar} alt="avatar"></img>
+					<img
+						src={item.isUser ? AvatarUser : AvatarBot}
+						alt="avatar"
+					></img>
 				</div>
-				<div className="message__text">
+				<div
+					className={[
+						'message__text',
+						!item.isUser ? 'message__text_white' : '',
+					].join(' ')}
+				>
 					<p>{item.text}</p>
 				</div>
 			</div>

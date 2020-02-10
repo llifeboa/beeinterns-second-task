@@ -11,8 +11,8 @@ function ChatBot() {
 	const sendCommand = command => {
 		const response = chatBotApi[0](command);
 		messageListSet([
-			{ text: response, id: [messageList.length + 1] },
-			{ text: command, id: [messageList.length] },
+			{ text: response, id: [messageList.length + 1], isUser: false },
+			{ text: command, id: [messageList.length], isUser: true },
 			...messageList,
 		]);
 	};

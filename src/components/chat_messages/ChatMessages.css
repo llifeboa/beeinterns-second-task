@@ -13,6 +13,7 @@
 .message {
 	display: flex;
 	padding-bottom: 2rem;
+	align-items: flex-start;
 }
 
 .message__avatar {
@@ -22,13 +23,18 @@
 .message__text {
 	min-width: 200px;
 	box-sizing: border-box;
-	padding: 0 2rem;
-	font-size: 1.5rem;
+	padding: 1.3rem 2rem;
+	font-size: 1.6rem;
 	display: flex;
+	color: #282828;
 	align-items: center;
 	background: #f9c35b;
 	border-radius: 35px;
 	margin-left: 2rem;
+	line-height: 3rem;
+}
+.message__text_white {
+	background-color: #f1f0f0;
 }
 .message__text > p {
 	margin: 0;
