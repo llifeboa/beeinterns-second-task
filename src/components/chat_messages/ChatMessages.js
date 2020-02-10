@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './ChatMessages.css';
 import Avatar from '../../img/avatar_1.svg';
-function ChatMessages() {
-	const [messageList, messageListSet] = useState([
-		{
-			text: '/number',
-		},
-		{
-			text: '/number',
-		},
-		{
-			text: '/number',
-		},
-	]);
-	const list = messageList.map(item => {
+function ChatMessages(props) {
+	const list = props.messageList.map(item => {
 		return (
-			<div className="message">
+			<div className="message" key={item.id}>
 				<div className="message__avatar">
 					<img src={Avatar} alt="avatar"></img>
 				</div>
