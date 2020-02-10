@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'Halant';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./fonts/Halant-Regular.eot'); /* IE9 Compat Modes */
+	src: local('Halant Regular'), local('Halant-Regular'),
+		url('./fonts/Halant-Regular.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */ url('./fonts/Halant-Regular.woff2') format('woff2'),
+		/* Super Modern Browsers */ url('./fonts/Halant-Regular.woff')
+			format('woff'),
+		/* Modern Browsers */ url('./fonts/Halant-Regular.ttf')
+			format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'Halant';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./fonts/Halant-Bold.eot'); /* IE9 Compat Modes */
+	src: local('Halant Bold'), local('Halant-Bold'),
+		url('./fonts/Halant-Bold.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */ url('./fonts/Halant-Bold.woff2') format('woff2'),
+		/* Super Modern Browsers */ url('./fonts/Halant-Bold.woff')
+			format('woff'),
+		/* Modern Browsers */ url('./fonts/Halant-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
