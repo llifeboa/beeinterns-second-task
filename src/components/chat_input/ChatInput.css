@@ -13,10 +13,12 @@
 	border: none;
 	color: black;
 	font-size: 1.5rem;
+	font-style: normal;
 }
 
 .chat-input__send {
-	flex: 0 0 32px;
+	min-width: 2.5rem;
+	height: 2.2rem;
 	padding: 0;
 	appearance: none;
 	border: none;
@@ -24,7 +26,23 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
+	mask: url('../../img/seng.svg');
+	mask-size: cover;
+	background: #929292;
+	transform-origin: center center;
+	transition: transform 0.3s;
 }
-.chat-input__send img {
-	max-width: 100%;
+
+.chat-input__send_active {
+	background: #f9c35b;
+}
+
+.chat-input__send:active {
+	transform: scale(0.9);
+}
+
+@media (max-width: 575.98px) {
+	.chat-input {
+		border-radius: 0;
+	}
 }

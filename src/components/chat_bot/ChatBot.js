@@ -6,8 +6,9 @@ import ChatBotApi from '../../api/ChatBotApi.js';
 import MessageContext from './MessageContext.js';
 
 function ChatBot() {
-	const [chatBotApi] = useState([ChatBotApi({ debug: true })]);
+	const [chatBotApi] = useState([ChatBotApi({ debug: false })]);
 	const [messageList, messageListSet] = useState([]);
+	const [isInputFocused, isInputFocusedSet] = useState(false);
 	const sendCommand = command => {
 		const response = chatBotApi[0](command);
 		messageListSet([
@@ -22,8 +23,13 @@ function ChatBot() {
 				<span className="chat-bot__header">Чат-бот</span>
 			</header>
 			<div className="chat-bot__wrapper">
-				<ChatMessages messageList={messageList}></ChatMessages>
-				<MessageContext.Provider value={sendCommand}>
+				<ChatMessages
+					messageList={messageList}
+					isInputFocused={isInputFocused}
+				></ChatMessages>
+				<MessageContext.Provider
+					value={[sendCommand, isInputFocusedSet]}
+				>
 					<ChatInput></ChatInput>
 				</MessageContext.Provider>
 			</div>

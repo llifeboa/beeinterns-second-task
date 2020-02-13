@@ -7,6 +7,8 @@ function ChatBotApi({ debug } = { debug: false }) {
 		if (!isStart && /^\/start$/.test(command)) {
 			isStart = true;
 			response = 'Привет, меня зовут Чат-бот, а как зовут тебя?';
+		} else if (!isStart) {
+			response = 'Введите команду /start, для начала общения';
 		} else if (isStart && /^\/stop$/.test(command)) {
 			isStart = false;
 			numbers = [];
