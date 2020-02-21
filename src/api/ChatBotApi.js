@@ -33,7 +33,7 @@ function ChatBotApi({ debug } = { debug: false }) {
 			else if (command[0] === '+') result = numbers[0] + numbers[1];
 			response = `Результат: ${result.toString()}`;
 			numbers = [];
-		}
+		} 
 		if (debug) console.log('after: ', isStart, numbers);
 		return response;
 	};
