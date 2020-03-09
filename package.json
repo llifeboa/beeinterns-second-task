@@ -15,6 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ui": "mocha ui_test.js --timeout 10000",
     "test:api": "ava --verbose",
     "eject": "react-scripts eject"
   },
@@ -34,13 +35,17 @@
     ]
   },
   "devDependencies": {
+    "assert": "^2.0.0",
     "ava": "^3.3.0",
+    "chromedriver": "78.0.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "esm": "^3.2.25",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
+    "mocha": "^7.1.0",
     "prettier": "^1.19.1",
+    "selenium-webdriver": "^4.0.0-alpha.7",
     "tap-nyan": "^1.1.0"
   },
   "ava": {
